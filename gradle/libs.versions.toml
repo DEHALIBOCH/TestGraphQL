@@ -1,16 +1,25 @@
 [versions]
 agp = "8.3.0-alpha01"
-kotlin = "1.8.10"
+apollo-graphql = "3.7.3"
+dagger-hilt-android = "2.45"
+hilt-compiler = "1.0.0"
+kotlin = "1.9.0"
 core-ktx = "1.10.1"
 junit = "4.13.2"
 androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.6.1"
 activity-compose = "1.7.2"
-compose-bom = "2023.03.00"
+compose-bom = "2023.08.00"
 
 [libraries]
+lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle-runtime-ktx" }
+apollo-graphql = { module = "com.apollographql.apollo3:apollo-runtime", version.ref = "apollo-graphql" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt-android" }
+dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt-android" }
+dagger-hilt-android-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-compiler" }
+dagger-hilt-android-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hilt-compiler" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
@@ -28,4 +37,6 @@ material3 = { group = "androidx.compose.material3", name = "material3" }
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+daggerHilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger-hilt-android" }
+apolloGraphQL = { id = "com.apollographql.apollo3", version.ref = "apollo-graphql" }
 
