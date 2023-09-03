@@ -36,7 +36,7 @@ class CountriesViewModel @Inject constructor(
         }
     }
 
-    fun selectedCountry(code: String) {
+    fun selectCountry(code: String) {
         viewModelScope.launch {
             _state.update {
                 it.copy(
